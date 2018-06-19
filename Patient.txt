@@ -1,0 +1,2 @@
+Ivanov;Ivan;04.07.1993;true
+Smirnov;Stepan;23.10.1960;false
