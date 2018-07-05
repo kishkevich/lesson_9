@@ -1,39 +1,45 @@
 import java.util.Date;
 
 public class Patient {
-    private String name;
-    private String surname;
-    private Date  dateOfBirth;
-    private boolean health;
+    private String firstName;
+    private String lastName;
+    private Date birthday;
+    private boolean healthy;
 
-    public Patient (String surname, String name, Date dateOfBirth, boolean health){
-        this.surname=surname;
-        this.name=name;
-        this.dateOfBirth = dateOfBirth;
-        this.health=health;
+    public Patient(String firstName, String lastName, Date birthday, boolean healthy) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthday = birthday;
+        this.healthy = healthy;
     }
 
-    public String getName(){
-        return name;
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
-    public String getSurname (){
-        return surname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public Date getDateOfBirth(){
-        return dateOfBirth;
+    public String getLastName() {
+        return lastName;
     }
 
-    public boolean getHealth(){
-        return health;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public String toStrinng (){
-        return "Patient {" +
-                "name: " + name +
-                "; surname: " + surname+
-                "; date of birth: " + dateOfBirth+
-                "; health: " + health + " }";
+    public boolean isHealthy() {
+        return healthy;
+    }
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthday=" + birthday +
+                ", healthy=" + healthy +
+                '}';
     }
 }

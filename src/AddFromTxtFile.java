@@ -13,7 +13,7 @@ private SimpleDateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
 
 
     public void getPatient() throws IOException{
-        URL myURL = new URL ("https://github.com/kishkevich/Lesson9/blob/master/Patient.txt");
+        URL myURL = new URL ("https://raw.githubusercontent.com/kishkevich/lesson_9/master/Patient.txt");
         HttpsURLConnection urlCon = (HttpsURLConnection) myURL.openConnection();
         DataInputStream inputStream = new DataInputStream(new FileInputStream(String.valueOf(urlCon)));
 String surname = inputStream.readUTF();
